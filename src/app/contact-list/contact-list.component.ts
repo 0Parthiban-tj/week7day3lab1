@@ -14,6 +14,7 @@ export class ContactListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.contacts=contacts;
   // initialize your contacts here
   }
 
@@ -22,6 +23,8 @@ export class ContactListComponent implements OnInit {
      // Fill your code here
     // add contact to contacts list
     // clear inputs
+    this.contacts.unshift(newContact);
+    this.newContact = {};
    
   }
 }
